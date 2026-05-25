@@ -6,7 +6,7 @@ export const resumeData = {
     phone: "813-290-1680",
     location: "Tampa, FL",
     linkedin: "LinkedIn",
-    linkedinUrl: "https://www.linkedin.com/in/loveshkumar/",
+    linkedinUrl: "https://www.linkedin.com/in/lovesh-kumar/",
     github: "GitHub",
     githubUrl: "https://github.com/lovesh124"
   },
@@ -44,7 +44,7 @@ export const resumeData = {
     {
       name: "MemeCrafter – Meme Analysis System",
       tech: "Python, PyTorch, BLIP-2, LoRA, EasyOCR, Gradio",
-      link: "https://github.com/lovesh124/MemeCrafter",
+      link: "https://github.com/lovesh124/Meme_Caption",
       bullets: [
         "Fine-tuned BLIP-2 (2.7B parameter vision-language model) on a custom meme dataset using LoRA adapters, enabling meme-specific captioning and sentiment classification.",
         "Built a multi-modal analysis pipeline combining EasyOCR text extraction with BLIP-2 visual understanding to detect sentiment (positive, negative, neutral, sarcastic) with context-aware accuracy.",
@@ -54,7 +54,7 @@ export const resumeData = {
     {
       name: "ASL Gesture Recognition System",
       tech: "Python, TensorFlow, MediaPipe, CNN, OpenCV",
-      link: "https://github.com/lovesh124/ASL-Gesture-Recognition",
+      link: "https://github.com/lovesh124/asl_recognition-",
       bullets: [
         "Built a complete CNN-based pipeline to classify 36 ASL signs (A–Z and 0–9) in real time, using MediaPipe for hand landmark detection and background segmentation.",
         "Trained multiple CNN architectures with data augmentation (rotation, zoom, shear), batch normalization, and dropout, achieving 88-93% test accuracy across 36 classes.",
@@ -64,7 +64,7 @@ export const resumeData = {
     {
       name: "Mental Health Chatbot",
       tech: "Python, TensorFlow, Flask, React, TypeScript, PostgreSQL, AWS",
-      link: "https://github.com/lovesh124/Mental-Health-Chatbot",
+      link: "https://github.com/lovesh124/mental",
       bullets: [
         "Developed a full-stack AI chatbot with a React/TypeScript frontend and Flask backend, using a hybrid TensorFlow NLP model + keyword matching to classify 7 intents with 95%+ validation accuracy.",
         "Trained a sequential neural network (Embedding → GlobalAveragePooling → Dense) with early stopping and learning rate scheduling, improving F1 score from 0.50 to 0.60 through iterative data expansion.",
