@@ -3,20 +3,21 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-export function FadeIn({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
+export function FadeIn({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay }}
+      className={className}
     >
       {children}
     </motion.div>
   );
 }
 
-export function StaggerContainer({ children }: { children: ReactNode }) {
+export function StaggerContainer({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <motion.div
       initial="hidden"
@@ -29,13 +30,14 @@ export function StaggerContainer({ children }: { children: ReactNode }) {
           },
         },
       }}
+      className={className}
     >
       {children}
     </motion.div>
   );
 }
 
-export function StaggerItem({ children }: { children: ReactNode }) {
+export function StaggerItem({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <motion.div
       variants={{
@@ -46,6 +48,7 @@ export function StaggerItem({ children }: { children: ReactNode }) {
           transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
         },
       }}
+      className={className}
     >
       {children}
     </motion.div>
