@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #06040f; /* Deep Space Black */
+  --color-foreground: #ede9f6; /* Off-white / Muted */
+  --color-accent: #a855f7; /* Cyberpunk Purple */
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    @apply font-sans antialiased selection:bg-accent selection:text-white cursor-none;
+  }
+  
+  a, button {
+    @apply cursor-none; /* Hide default cursor so custom cursor shows */
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl shadow-2xl;
+  }
+  
+  .glow-btn {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-sm tracking-wider text-background bg-accent rounded-sm overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 20px rgba(168,85,247,0.4);
+  }
+  .glow-btn:hover {
+    box-shadow: 0 0 40px rgba(168,85,247,0.7), 0 0 80px rgba(168,85,247,0.2);
+    transform: translateY(-2px);
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+}
