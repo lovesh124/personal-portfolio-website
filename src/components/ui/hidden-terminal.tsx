@@ -7,7 +7,7 @@ import { useSound } from "@/hooks/use-sound";
 
 interface CommandHistory {
   command: string;
-  output: string | JSX.Element;
+  output: string | React.JSX.Element;
 }
 
 export function HiddenTerminal() {
