@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { resumeData } from "@/data/resume";
 import { useSound } from "@/hooks/use-sound";
+import React from "react";
 
 interface CommandHistory {
   command: string;
@@ -52,7 +53,7 @@ export function HiddenTerminal() {
       const cmd = input.trim().toLowerCase();
       playHover(); // Use as enter sound
       
-      let output: string | JSX.Element = "";
+      let output: string | React.JSX.Element = "";
       
       if (cmd === '') {
         output = "";
