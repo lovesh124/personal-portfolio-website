@@ -54,10 +54,10 @@ export default function Home() {
               <div className="flex items-center gap-2 font-mono text-xs uppercase">
                 <MapPin size={16} /> {resumeData.contact.location}
               </div>
-              <a href="#" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
+              <a href={resumeData.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
                 <span className="opacity-50">in/</span> {resumeData.contact.linkedin} <MoveUpRight size={12} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
               </a>
-              <a href="#" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
+              <a href={resumeData.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
                 <span className="opacity-50">gh/</span> {resumeData.contact.github} <MoveUpRight size={12} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
               </a>
             </div>
@@ -117,7 +117,8 @@ export default function Home() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-20">
           {resumeData.projects.map((proj, i) => (
             <StaggerItem key={i} className="h-full">
-              <a href="#" className="block h-full group cursor-none">
+              {/* @ts-ignore */}
+              <a href={proj.link || "#"} target={proj.link ? "_blank" : undefined} rel={proj.link ? "noopener noreferrer" : undefined} className="block h-full group cursor-none">
                 <div className="glass-card p-8 rounded-2xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.04]">
                   <div className="space-y-4">
                     <div className="flex justify-between items-start">
