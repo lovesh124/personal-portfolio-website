@@ -39,7 +39,7 @@ export function ScrambleText({
         clearInterval(interval);
       }
 
-      iteration += 1 / 3;
+      iteration += 1 / 2;
     };
 
     // 2. Wrap the interval in a timeout to respect the delay prop (multiplied by 1000 for milliseconds)
