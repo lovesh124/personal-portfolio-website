@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #06040f; /* Deep Space Black */
-  --color-foreground: #ede9f6; /* Off-white / Muted */
-  --color-accent: #a855f7; /* Cyberpunk Purple */
+  --color-background: #020617; /* Midnight Navy */
+  --color-foreground: #ecfeff; /* Cyan Off-white */
+  --color-accent: #06b6d4; /* Electric Cyan */
+  --color-pink: #ec4899; /* Hot Pink */
 
   --font-sans: var(--font-inter);
   --font-mono: var(--font-mono);
@@ -23,16 +24,18 @@
 
 @layer utilities {
   .glass-card {
-    @apply bg-white/[0.02] border border-white/[0.05] backdrop-blur-xl shadow-2xl;
+    @apply bg-white/[0.02] border border-[#06b6d4]/20 backdrop-blur-xl shadow-2xl;
   }
   
   .glow-btn {
-    @apply relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-sm tracking-wider text-background bg-accent rounded-sm overflow-hidden transition-all duration-300;
-    box-shadow: 0 0 20px rgba(168,85,247,0.4);
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-sm tracking-wider text-[#020617] bg-accent rounded-sm overflow-hidden transition-all duration-300;
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
   }
   .glow-btn:hover {
-    box-shadow: 0 0 40px rgba(168,85,247,0.7), 0 0 80px rgba(168,85,247,0.2);
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.7), 0 0 80px rgba(236, 72, 153, 0.5); /* Cyan to pink hover */
     transform: translateY(-2px);
+    background-color: var(--color-pink);
+    color: white;
   }
 
   @keyframes marquee {

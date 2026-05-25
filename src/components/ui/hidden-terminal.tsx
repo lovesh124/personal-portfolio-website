@@ -94,9 +94,9 @@ export function HiddenTerminal() {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[600px] h-[350px] glass-card rounded-xl p-5 font-mono text-xs text-accent overflow-hidden flex flex-col z-[100] border border-[#a855f7]/30 shadow-[0_0_40px_rgba(168,85,247,0.15)] bg-black/60 backdrop-blur-3xl"
+          className="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[600px] h-[350px] glass-card rounded-xl p-5 font-mono text-xs text-accent overflow-hidden flex flex-col z-[100] border border-[#06b6d4]/30 shadow-[0_0_40px_rgba(6,182,212,0.15)] bg-black/60 backdrop-blur-3xl"
         >
-          <div className="flex justify-between items-center mb-3 pb-3 border-b border-[#a855f7]/30 opacity-70">
+          <div className="flex justify-between items-center mb-3 pb-3 border-b border-[#06b6d4]/30 opacity-70">
             <span>LOVESH_OS v1.0.0</span>
             <button onClick={() => { setIsOpen(false); playHover(); }} className="hover:text-white transition-colors cursor-none">[X]</button>
           </div>
@@ -105,7 +105,7 @@ export function HiddenTerminal() {
             {history.map((item, i) => (
               <div key={i} className="space-y-1">
                 {item.command && <div className="text-white opacity-80">{item.command}</div>}
-                <div className="text-[#a855f7]/90 leading-relaxed">{item.output}</div>
+                <div className="text-[#06b6d4]/90 leading-relaxed">{item.output}</div>
               </div>
             ))}
             
@@ -118,7 +118,7 @@ export function HiddenTerminal() {
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleCommand}
                 onBlur={() => isOpen && inputRef.current?.focus()} // Keep focus locking
-                className="bg-transparent border-none outline-none flex-1 text-[#a855f7] focus:ring-0 w-full cursor-none"
+                className="bg-transparent border-none outline-none flex-1 text-[#06b6d4] focus:ring-0 w-full cursor-none"
                 spellCheck={false}
                 autoComplete="off"
               />

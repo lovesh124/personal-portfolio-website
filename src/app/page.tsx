@@ -20,17 +20,17 @@ export default function Home() {
       <ParticleBackground />
       
       {/* Dark Mode Grid Background */}
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(rgba(42,31,74,0.3)_1px,transparent_1px),linear-gradient(90deg,rgba(42,31,74,0.3)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_50%,black_0%,transparent_100%)]"></div>
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_70%_at_50%_50%,black_0%,transparent_100%)]"></div>
       
       {/* Purple Glowing Orbs */}
-      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(168,85,247,0.1)_0%,transparent_70%),radial-gradient(ellipse_60%_50%_at_20%_70%,rgba(124,58,237,0.09)_0%,transparent_60%)]"></div>
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(ellipse_80%_60%_at_60%_40%,rgba(6,182,212,0.15)_0%,transparent_70%),radial-gradient(ellipse_60%_50%_at_20%_70%,rgba(236,72,153,0.1)_0%,transparent_60%)]"></div>
 
       <main className="min-h-screen p-8 md:p-24 max-w-[1200px] mx-auto space-y-40 relative z-10 overflow-hidden">
         {/* HERO SECTION */}
         <section className="space-y-6 pt-12 md:pt-24 mt-8">
           <FadeIn>
             {/* Developer Badge */}
-            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#c084fc] border border-[#c084fc]/20 bg-[#c084fc]/10 px-3 py-1.5 rounded-full mb-6 tracking-wider shadow-[0_0_15px_rgba(168,85,247,0.2)]">
+            <div className="inline-flex items-center gap-2 font-mono text-xs text-[#06b6d4] border border-[#06b6d4]/30 bg-[#06b6d4]/10 px-3 py-1.5 rounded-full mb-6 tracking-wider shadow-[0_0_15px_rgba(6,182,212,0.3)]">
               <span className="animate-pulse text-[8px]">●</span> SYSTEM_ONLINE
             </div>
             
@@ -86,7 +86,7 @@ export default function Home() {
         </section>
 
       {/* EXPERIENCE */}
-      <section className="space-y-12 border-t border-[#2a1f4a]/60 pt-16">
+      <section className="space-y-12 border-t border-[#06b6d4]/20 pt-16">
         <FadeIn>
           <div className="flex items-baseline justify-between mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">Experience</h2>
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
 
       {/* PROJECTS (GLASSMORPHISM CARDS) */}
-      <section className="space-y-12 border-t border-[#2a1f4a]/60 pt-16">
+      <section className="space-y-12 border-t border-[#06b6d4]/20 pt-16">
         <FadeIn>
           <div className="flex items-baseline justify-between mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">Projects</h2>
@@ -175,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* SKILLS MARQUEE */}
-      <section className="space-y-12 border-t border-[#2a1f4a]/60 pt-16 relative">
+      <section className="space-y-12 border-t border-[#06b6d4]/20 pt-16 relative">
         <FadeIn>
           <div className="flex items-baseline justify-between mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">Skills</h2>
@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* LEADERSHIP */}
-      <section className="space-y-12 border-t border-[#2a1f4a]/60 pt-24 pb-32">
+      <section className="space-y-12 border-t border-[#06b6d4]/20 pt-24 pb-32">
         <FadeIn>
           <div className="flex items-baseline justify-between mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground">Leadership</h2>

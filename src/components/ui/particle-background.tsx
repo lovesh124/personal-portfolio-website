@@ -39,7 +39,7 @@ export function ParticleBackground() {
         this.size = Math.random() * 2 + 0.5;
         this.density = Math.random() * 30 + 1;
         // Mix of Cyberpunk Purple and Muted White
-        this.color = Math.random() > 0.5 ? "rgba(168, 85, 247, 0.4)" : "rgba(237, 233, 246, 0.2)";
+        this.color = Math.random() > 0.5 ? "rgba(6, 182, 212, 0.5)" : "rgba(236, 72, 153, 0.3)";
       }
 
       draw() {
@@ -103,7 +103,7 @@ export function ParticleBackground() {
 
           if (distance < 80) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(168, 85, 247, ${0.15 - distance / 80 * 0.15})`;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.15 - distance / 80 * 0.15})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
