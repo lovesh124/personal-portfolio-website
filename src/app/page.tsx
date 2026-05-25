@@ -1,3 +1,5 @@
+"use client";
+
 import { resumeData } from "@/data/resume";
 import { Mail, MapPin, MoveUpRight, ArrowRight } from "lucide-react";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/fade-in";
@@ -5,10 +7,15 @@ import { ScrambleText } from "@/components/ui/scramble-text";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { InfiniteMarquee } from "@/components/ui/infinite-marquee";
 import { ParticleBackground } from "@/components/ui/particle-background";
+import { HiddenTerminal } from "@/components/ui/hidden-terminal";
+import { useSound } from "@/hooks/use-sound";
 
 export default function Home() {
+  const { playHover, playClick } = useSound();
+
   return (
     <div className="relative">
+      <HiddenTerminal />
       {/* Particle Network Canvas */}
       <ParticleBackground />
       
@@ -34,7 +41,7 @@ export default function Home() {
           <FadeIn delay={0.1}>
             <div className="text-xl md:text-3xl text-accent font-mono tracking-wide flex items-center gap-4 py-2">
               <span className="w-8 md:w-16 h-[1px] bg-accent"></span>
-              {resumeData.title}
+              <ScrambleText text={resumeData.title} delay={1.5} />
             </div>
           </FadeIn>
           
@@ -48,16 +55,30 @@ export default function Home() {
 
           <FadeIn delay={0.3}>
             <div className="flex flex-wrap gap-8 pt-12 text-foreground/60 relative z-20">
-              <a href={`mailto:${resumeData.contact.email}`} className="flex items-center gap-2 hover:text-accent transition-colors font-mono text-xs uppercase cursor-none">
+              <a 
+                href={`mailto:${resumeData.contact.email}`} 
+                onMouseEnter={playHover} onMouseDown={playClick}
+                className="flex items-center gap-2 hover:text-accent transition-colors font-mono text-xs uppercase cursor-none"
+              >
                 <Mail size={16} /> {resumeData.contact.email}
               </a>
               <div className="flex items-center gap-2 font-mono text-xs uppercase">
                 <MapPin size={16} /> {resumeData.contact.location}
               </div>
-              <a href={resumeData.contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
+              <a 
+                href={resumeData.contact.linkedinUrl} 
+                target="_blank" rel="noopener noreferrer" 
+                onMouseEnter={playHover} onMouseDown={playClick}
+                className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none"
+              >
                 <span className="opacity-50">in/</span> {resumeData.contact.linkedin} <MoveUpRight size={12} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
               </a>
-              <a href={resumeData.contact.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none">
+              <a 
+                href={resumeData.contact.githubUrl} 
+                target="_blank" rel="noopener noreferrer" 
+                onMouseEnter={playHover} onMouseDown={playClick}
+                className="flex items-center gap-2 hover:text-accent group transition-colors font-mono text-xs uppercase cursor-none"
+              >
                 <span className="opacity-50">gh/</span> {resumeData.contact.github} <MoveUpRight size={12} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"/>
               </a>
             </div>
@@ -118,7 +139,13 @@ export default function Home() {
           {resumeData.projects.map((proj, i) => (
             <StaggerItem key={i} className="h-full">
               {/* @ts-ignore */}
-              <a href={proj.link || "#"} target={proj.link ? "_blank" : undefined} rel={proj.link ? "noopener noreferrer" : undefined} className="block h-full group cursor-none">
+              <a 
+                href={proj.link || "#"} 
+                target={proj.link ? "_blank" : undefined} 
+                rel={proj.link ? "noopener noreferrer" : undefined} 
+                onMouseEnter={playHover} onMouseDown={playClick}
+                className="block h-full group cursor-none"
+              >
                 <div className="glass-card p-8 rounded-2xl h-full flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.04]">
                   <div className="space-y-4">
                     <div className="flex justify-between items-start">

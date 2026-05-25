@@ -2,10 +2,12 @@
 
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useSound } from "@/hooks/use-sound";
 
 export function MagneticButton({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const { playHover, playClick } = useSound();
 
   const handleMouse = (e: React.MouseEvent) => {
     const { clientX, clientY } = e;
@@ -25,6 +27,8 @@ export function MagneticButton({ children, className = "" }: { children: React.R
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
+      onMouseEnter={playHover}
+      onMouseDown={playClick}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
       className={`inline-block ${className}`}
